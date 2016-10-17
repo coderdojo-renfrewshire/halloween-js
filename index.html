@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HalloweenJs</title>
+    
+    <script src='halloween.js'></script>
+</head>
+<body>
+    <script>
+        var music = play('music.wav', 1.0)
+        draw('https://67.media.tumblr.com/7de9dbda714ccb2f236d5f4b7271cb25/tumblr_nd5eb8megL1tfw4zko1_500.gif')
+
+        waitFor(10000, function() {
+            music.pause();
+            draw('http://i.giphy.com/i965MQ5CXbS1i.gif')
+            play('suspense.wav', 1.0);
+        })
+    </script>
+</body>
+</html>
