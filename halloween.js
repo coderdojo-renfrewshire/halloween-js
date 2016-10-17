@@ -29,6 +29,8 @@ function play(audioFile, volume, finished) {
 
         audio.play();
         return audio;
+    } else {
+        error('play() takes 2+ parameters');
     }
 }
 
@@ -44,16 +46,15 @@ function clear()
 function draw(filename) {
     clear();
 
-    var image=document.createElement("img");
+    var image = document.createElement("img");
     image.setAttribute('src', filename);
     image.setAttribute('alt', 'na');
     image.setAttribute('height', window.innerHeight + 'px');
     image.setAttribute('width', window.innerWidth + 'px');
-    image.setAttribute('padding', '0');
-    image.setAttribute('margin', '0');
     image.style.overflow = 'hidden';
     image.style.padding = "0";
     image.style.margin = "0";
 
     document.body.appendChild(image);
+    return image;
 }
